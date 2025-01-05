@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prasad website</title>
+    <style>
+        input#operand-a
+        {
+
+        }
+    </style>
+</head>
+<body>
+    <h1>My Calculator</h1>
+    <form method="get">
+        <input type="number" name="first" id="operand-a" style="width: 70px;height: 50px;text-align: center;">
+        <input type="number" name="second" id="operand-b" style="width: 70px;height: 50px; text-align: center;"><br><br>
+        <button type="button" onclick="add()" id="add-btn" style="width: 50px;height: 50px;">+</button>
+        <button type="button"  onclick="sub()" id="sub-btn" style="width: 50px;height: 50px;">-</button>
+        <button type="button"  onclick="mul()" id="mul-btn" style="width: 50px;height: 50px;">x</button>
+        <button type="button"  onclick="div()" id="div-btn" style="width: 50px;height: 50px;">/</button>
+        <br><br><br>
+        <h1>OUTPUT : <span id="output">0</span></h1>
+    </form>
+</body>
+<script>
+    const operA=document.getElementById('operand-a');
+    const operB=document.getElementById('operand-b');
+    const output=document.getElementById('output');
+
+    function add()
+    {
+        let result=Number(operA.value) + Number(operB.value);
+        output.innerHTML=result;
+    }
+
+    function sub()
+    {
+        let result=Number(operA.value) - Number(operB.value);
+        output.innerHTML=result;
+    }
+
+    function mul()
+    {
+        let result=Number(operA.value) * Number(operB.value);
+        output.innerHTML=result;
+    }
+
+    function div()
+    {
+        let result=Number(operA.value) / Number(operB.value);
+        output.innerHTML=result;
+    }
+</script>
+</html>
